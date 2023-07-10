@@ -8,16 +8,11 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = "app")
+@ComponentScan(basePackages = {"app", "app.model"})
 public class AppConfig {
 
     @Bean
-    public Animal dog(){
+    public Animal dog() {
         return new Dog();
-    }
-
-    @Bean
-    public Timer timer(){
-        return new Timer();
     }
 }
